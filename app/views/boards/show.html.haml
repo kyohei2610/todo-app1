@@ -1,19 +1,17 @@
 .container 
-    %p All Boards
-    .article
-        %h1.article_title= @board.title
-        .dropdown
-            %p Menu
-            .dropdown-content
-                %a{:href => "#"} Edit
-                %a{:href => "#"} Delate
-        .article_content
-            = @board.content
+  %p All Boards
+  .article
+    %h1.article_title= @board.title
+    .dropdown
+      %p Menu
+      .dropdown-content
+        %a{:href => "#"} Edit
+        %a{:href => "#"} Delate
+      .article_content
+        = @board.content
 
-        .article_detail
-            = image_tag 'default-avatar.png'
-            %div
-            %p cohki0305
-            %p 2020/4/16    
-        .article_heart
-            = image_tag 'heart.svg'
+      .article_detail
+        = image_tag 'default-avatar.png'
+        %div
+        %p cohki0305
+        %p 2020/4/16
