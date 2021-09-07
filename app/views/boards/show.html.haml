@@ -2,16 +2,15 @@
   %p All Boards
   .article
     %h1.article_title= @board.title
-    .dropdown
-      %p Menu
-      .dropdown-content
-        %a{:href => "#"} Edit
-        %a{:href => "#"} Delate
-      .article_content
-        = @board.content
-
-      .article_detail
-        = image_tag 'default-avatar.png'
-        %div
-        %p cohki0305
-        %p 2020/4/16
+    .article_detail_actions 
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown-content.mini
+          = link_to 'Edit', edit_board_path(@board)
+    .article_content
+      = @board.content
+    .article_detail
+      = image_tag 'default-avatar.png'
+      %div
+      %p cohki0305
+      %p 2020/4/16
