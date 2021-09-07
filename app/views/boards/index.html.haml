@@ -1,15 +1,12 @@
 .container
   %p All Boards
-  .tabs
-    .tabs_item.active
-      新着記事一覧
-    .tabs_item
-      タイムライン
   - @boards.each do |board|
     = link_to board_path(board) do
       .article
-        .card_image
-          = image_tag 'eyecatch1.png'
         .card_content
           .card_title
             = board.title
+  .add_card
+    %p
+      = link_to '+ Add new board', new_board_path
+    
