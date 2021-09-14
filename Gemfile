@@ -36,6 +36,7 @@ group :development, :test do
   gem 'erb2haml'
   gem 'pry-byebug'
   gem 'rubocop-rails'
+  gem 'devise'
 end
 
 group :development do
